@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import perrito from "./assets/perrito.png"
-import './App.css'
+import perrito from "../assets/perrito.png"
+import '../App.css'
 import { Button, Avatar, Typography, Stack } from '@mui/material'
 
 
 
-const MiAnimal = () => {
+const Ficha = () => {
     const [count, setCount] = useState(0)
 
     function handleClick() {
@@ -39,4 +39,4 @@ const MiAnimal = () => {
   )
 }
 
-export default MiAnimal
+export default Ficha

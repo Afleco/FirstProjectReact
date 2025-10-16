@@ -1,11 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import MiAnimal from './MiAnimal.jsx'
+import App from './App.jsx'
 import AppGrid from './AppGrid.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MiAnimal />
+    <App />
     <AppGrid />
   </StrictMode>,
 )
