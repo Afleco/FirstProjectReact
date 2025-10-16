@@ -1,0 +1,27 @@
+#perrito {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: auto;
+  border: 2px solid black;
+}
+
+#buton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+#rascame {
+  text-align: center;
+}
+
+div {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
