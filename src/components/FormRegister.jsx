@@ -7,6 +7,7 @@ import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import Container from '@mui/material/Container'
 import { useState } from 'react'
+import { bottomNavigationActionClasses } from '@mui/material'
 
 
 function FormRegister() {
@@ -30,24 +31,40 @@ function FormRegister() {
     }
 
     return(
-        <Container>
-            <Paper elevation={4} square={false} sx={{textAlign:'center'}}>
-                <Typography variant='h6' color='primary' sx={{mt:2, mb:2}}>Registra tu mascota</Typography>
-                <Box component='form' onSubmit={handleSubmit}>
-                    <Grid spacing={0}>
-                        <Grid size={{xs: 12, sm: 6, md: 6}}>
-                            <TextField required label='Pet name' variant='outlined' fullWidth value={data.name} onChange={handleChangeName}/>
-                        </Grid>
-                        <Grid size={{xs: 12, sm: 6, md: 6}}>
-                            <TextField label='Breed' variant='outlined'fullWidth value={data.breed} onChange={handleChangeBreed}/>
-                        </Grid>
-                        <Grid size={12}>
-                            <Button type='submit' variant='outlined' fullWidth>Registrar</Button>
-                        </Grid>
-                    </Grid>
-                </Box>
-            </Paper>
-        </Container>
+        <Container sx={{padding: 5}}>
+    <Paper elevation={4} square={false} sx={{textAlign:'center', padding: 3}}>
+        <Typography variant='h6' color='orange' sx={{mt:2, mb:2, fontSize: 25}}>Registra tu mascota</Typography>
+        <Box component='form' onSubmit={handleSubmit}>
+            <Grid container spacing={2}>
+                <Grid size={{xs: 12, sm: 6, md: 6}}>
+                    <TextField 
+                        required 
+                        label='Pet name' 
+                        variant='outlined' 
+                        fullWidth 
+                        value={data.name} 
+                        onChange={handleChangeName}
+                    />
+                </Grid>
+                <Grid size={{xs: 12, sm: 6, md: 6}}>
+                    <TextField 
+                        required 
+                        label='Breed' 
+                        variant='outlined' 
+                        fullWidth 
+                        value={data.breed} 
+                        onChange={handleChangeBreed}
+                    />
+                </Grid>
+                <Grid size={12} sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                    <Button type='submit' variant='outlined' sx={{minWidth: 150, color: 'white', backgroundColor: 'orange', borderColor: 'black'}}>
+                        Registrar
+                    </Button>
+                </Grid>
+            </Grid>
+        </Box>
+    </Paper>
+</Container>
     )
 }
 

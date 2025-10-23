@@ -6,6 +6,6 @@ import AppGrid from './AppGrid.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <AppGrid />
+    {/* <AppGrid />  */}
   </StrictMode>,
 )

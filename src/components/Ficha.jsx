@@ -18,7 +18,7 @@ const Ficha = () => {
       <Typography variant="h3">¡Holi!</Typography>
         <Avatar src={perrito} sx={{ width: "400px", height: "400px"}} alt="perrito" />
         
-      <Button id="buton" variant="contained" elevation={9} sx={{color : "blue", backgroundColor: "lightgrey"}}  onClick={handleClick}>
+      <Button id="buton" variant="contained" elevation={9} sx={{color : "white", backgroundColor: "orange"}}  onClick={handleClick}>
         Me has hecho {count} rascaditas 
       </Button>
 
