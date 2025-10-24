@@ -7,6 +7,10 @@ import bird from '../src/assets/bird.jpg'
 import turtle from '../src/assets/turtle.jpg'
 import dog from '../src/assets/dog.jpg'
 
+import React from 'react'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+
 
 import Ficha from './components/Ficha'
 import FormRegistro from './components/FormRegister'
@@ -60,13 +64,19 @@ function App() {
 
   return (
     <>
-      <Ficha animal='al perrito' image={perrito} size={400} description="guau guau!" />
+    <List>
+      {animals.map((animal) => (
+        <ListItem key={animal.id}>
+          <Ficha animal={animal.animal} atribute={animal.atribute} imageUrl={animal.imageUrl} imageSize={animal.imageSize} description={animal.description} />
+        </ListItem>))}
+    </List>
+      {/* <Ficha animal='al perrito' image={perrito} size={400} description="guau guau!" />
 
       <Ficha animal='al gato' image={cat} size={400} description="miau miau!" />
       <Ficha animal='al pájaro' image={bird} size={400} description="pio pio!" />
       <Ficha animal='a la tortuga' image={turtle} size={400} description="glub glub!" />
-      <Ficha animal='al perro' image={dog} size={400} description="guau guau!" />
-      {/*<FormRegistro />*/}
+      <Ficha animal='al perro' image={dog} size={400} description="guau guau!" /> */}
+      <FormRegistro />
     </>
   )
 }
