@@ -15,15 +15,57 @@ import './App.css'
 
 function App() {
 
+  const animals = [{
+    id: 0,
+    animal: 'perrito',
+    atribute: 'bello',
+    imageUrl: '../src/assets/perrito.png',
+    imageSize: 400,
+    description: 'guau guau!'
+  },
+  {
+    id: 1,
+    animal: 'gato',
+    atribute: 'feliz',
+    imageUrl: '../src/assets/cat.jpg',
+    imageSize: 400,
+    description: 'Gato común'
+  },
+  {
+    id: 2,
+    animal: 'perro',
+    atribute: 'bello',
+    imageUrl: '../src/assets/dog.jpg',
+    imageSize: 400,
+    description: 'Perro callejero'
+  },
+  {
+    id: 3,
+    animal: 'loro',
+    atribute: 'hablador',
+    imageUrl: '../src/assets/bird.jpg',
+    imageSize: 400,
+    description: 'Loro de la jungla'
+  },
+  {
+    id: 4,
+    animal: 'tortuga',
+    atribute: 'perezosa',
+    imageUrl: '../src/assets/turtle.jpg',
+    imageSize: 400,
+    description: 'Tortuga'
+  }]
+
+
 
   return (
     <>
-      <Ficha animal='al perrito' image={perrito} description="guau guau!"/>
-      
-      <Ficha animal='al gato' image={cat} description="miau miau!"/>
-      <Ficha animal='al pájaro' image={bird} description="pio pio!"/>
-      <Ficha animal='a la tortuga' image={turtle} description="glub glub!"/>
-      <Ficha animal='al perro' image={dog} description="guau guau!"/>
+      <Ficha animal='al perrito' image={perrito} size={400} description="guau guau!" />
+
+      <Ficha animal='al gato' image={cat} size={400} description="miau miau!" />
+      <Ficha animal='al pájaro' image={bird} size={400} description="pio pio!" />
+      <Ficha animal='a la tortuga' image={turtle} size={400} description="glub glub!" />
+      <Ficha animal='al perro' image={dog} size={400} description="guau guau!" />
       {/*<FormRegistro />*/}
     </>
   )

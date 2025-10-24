@@ -5,7 +5,7 @@ import { Button, Avatar, Typography, Stack } from '@mui/material'
 
 
 
-const Ficha = ({animal, image, description}) => {
+const Ficha = ({id, animal, atribute, imageUrl, imageSize, description}) => {
     const [count, setCount] = useState(0)
 
     function handleClick() {
@@ -17,7 +17,7 @@ const Ficha = ({animal, image, description}) => {
   return (
     <Stack direction={{ xs: 'column', sm: 'column' }} spacing={{ xs: 2, sm: 4, md: 6 }} sx={{alignItems: "center", justifyContent: "center"}}>
       <Typography variant="h3">Rasca {animal}</Typography>
-        <Avatar src={image} sx={{ width: "400px", height: "400px"}} alt={description} />
+        <Avatar src={imageUrl} sx={{ width: imageSize, height: imageSize}} alt={description} />
         
       <Button id="buton" variant="contained" elevation={9} sx={{color : "white", backgroundColor: "orange"}}  onClick={handleClick}>
         Me has hecho {count} rascaditas 
